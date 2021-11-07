@@ -1,6 +1,7 @@
 import React, {useState, useContext} from "react"
 import {Context} from "../Context"
 import CartItem from "../components/CartItem"
+import AnimatedButton from "../components/AnimatedButton"
 
 function Cart() {
     const [buttonText, setButtonText] = useState("Place Order")
@@ -29,7 +30,7 @@ function Cart() {
             {
                 cartItems.length > 0 ?
                 <div className="order-button">
-                    <button onClick={placeOrder}>{buttonText}</button>
+                    <AnimatedButton onClick={placeOrder}>{buttonText}</AnimatedButton>
                 </div> :
                 <p>You have no items in your cart.</p>
             }
