@@ -6,6 +6,7 @@ html, body {
 
 main.photos {
   padding: 10px;
+  margin-bottom: 2.7em;
   display: -ms-grid;
   display: grid;
   grid-gap: 2px;
@@ -17,6 +18,7 @@ main.photos {
 
 main.cart-page {
   padding: 10px;
+  overflow: auto;
 }
 
 .cart-page > h1 {
@@ -37,18 +39,6 @@ main.cart-page {
           justify-content: center;
 }
 
-/*
-div.order-button > button {
-    border-color: $black-color;
-    cursor: pointer;
-    padding: 15px;
-    transition: all .2s ease-in-out;
-}
-
-div.order-button > button:focus {
-    outline: none;
-}
-*/
 div.order-button > button:disabled {
   border-color: lightgray;
 }
@@ -100,6 +90,16 @@ img.image-grid {
   cursor: pointer;
 }
 
+.ri-linkedin-box-fill {
+  font-size: 1.3em;
+  color: #EFFBFE;
+  cursor: pointer;
+}
+
+.ri-linkedin-box-fill:hover {
+  color: #F47B6E;
+}
+
 .cart {
   color: #ACE6EC;
   font-size: 1.2rem;
@@ -135,6 +135,7 @@ header {
   background-color: #F47B6E;
   color: #EFFBFE;
   padding: 0 10px;
+  margin-bottom: 0;
   -webkit-box-shadow: 0px 2px 10px -5px #150605;
   box-shadow: 0px 2px 10px -5px #150605;
 }
@@ -153,6 +154,27 @@ a:hover {
 
 a:active {
   color: #EFFBFE;
+}
+
+.linked-in {
+  color: #150605;
+}
+
+footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  height: 3em;
+  width: 100%;
+  background-color: #150605;
+  position: fixed;
+  bottom: 0;
 }
 
 /*Button*/
@@ -220,6 +242,7 @@ a:active {
   letter-spacing: 0.05rem;
   outline: none;
   font-weight: 600;
+  margin-bottom: 4em;
 }
 
 .btn:focus {

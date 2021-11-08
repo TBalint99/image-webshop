@@ -2,12 +2,14 @@ import React from "react"
 import {Switch, Route} from "react-router-dom"
 
 import Header from "./components/Header"
+import Footer from "./components/Footer"
 import Cart from "./pages/Cart"
 import Photos from "./pages/Photos"
+import LinkedIn from "./pages/LinkedIn"
 
 function App() {    
     return (
-        <div>
+        <>
             <Header />
             <Switch>
                 <Route exact path="/">
@@ -17,8 +19,13 @@ function App() {
                 <Route path="/cart">
                     <Cart />
                 </Route>
+
+                <Route path="/linkedin">
+                    <LinkedIn />
+                </Route>
             </Switch>
-        </div>
+            <Footer />
+        </>
     )
 }
 

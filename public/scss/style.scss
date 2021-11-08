@@ -12,8 +12,9 @@ html, body {
     font-family: $basic-font-stack;
 }
 
-main.photos {
+main.photos{
     padding: 10px;
+    margin-bottom: 2.7em;
     display: grid;
     grid-gap: 2px;
     grid-auto-rows: 100px;
@@ -23,6 +24,7 @@ main.photos {
 
 main.cart-page {
     padding: 10px;
+    overflow: auto;
 }
 
 .cart-page > h1 {
@@ -38,19 +40,6 @@ main.cart-page {
     display: flex;
     justify-content: center;
 }
-
-/*
-div.order-button > button {
-    border-color: $black-color;
-    cursor: pointer;
-    padding: 15px;
-    transition: all .2s ease-in-out;
-}
-
-div.order-button > button:focus {
-    outline: none;
-}
-*/
 
 div.order-button > button:disabled {
     border-color: $disabled-color;
@@ -96,6 +85,16 @@ img.image-grid {
     cursor: pointer;
 }
 
+.ri-linkedin-box-fill {
+    font-size: 1.3em;
+    color: $light-blue-color;
+    cursor: pointer;
+}
+
+.ri-linkedin-box-fill:hover {
+    color: $pink-color;
+}
+
 .cart {
     color: $blue-color;
     font-size: 1.2rem;
@@ -125,6 +124,7 @@ header {
     background-color: $pink-color;
     color: $light-blue-color;
     padding: 0 10px;
+    margin-bottom: 0;
     -webkit-box-shadow: 0px 2px 10px -5px rgba(21,6,5,1);
     -moz-box-shadow: 0px 2px 10px -5px rgba(21,6,5,1);
     box-shadow: 0px 2px 10px -5px rgba(21,6,5,1);
@@ -137,6 +137,21 @@ a {
 a:visited { color: $light-blue-color; }
 a:hover { color: $light-blue-color; }
 a:active { color: $light-blue-color; }
+
+.linked-in {
+    color: $black-color;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 3em;
+    width: 100%;
+    background-color: $black-color;
+    position: fixed;
+    bottom: 0;
+}
 
 /*Button*/
 //=== Drawing effect
@@ -206,6 +221,7 @@ a:active { color: $light-blue-color; }
     letter-spacing: 0.05rem;
     outline: none;
     font-weight: 600;
+    margin-bottom: 4em;
     
     &:focus { outline: none; }
   }
