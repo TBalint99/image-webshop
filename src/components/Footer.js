@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 function Footer() {
     return (
         <footer>
-            <Link to="/image-webshop/linkedin">
+            <Link to="/linkedin">
                 <i className="ri-linkedin-box-fill"></i>
             </Link>
         </footer>
