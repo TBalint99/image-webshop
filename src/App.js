@@ -12,15 +12,15 @@ function App() {
         <>
             <Header />
             <Switch>
-                <Route exact path="/">
+                <Route exact path="/image-webshop">
                     <Photos />
                 </Route>
                 
-                <Route path="/cart">
+                <Route path="/image-webshop/cart">
                     <Cart />
                 </Route>
 
-                <Route path="/linkedin">
+                <Route path="/image-webshop/linkedin">
                     <LinkedIn />
                 </Route>
             </Switch>
