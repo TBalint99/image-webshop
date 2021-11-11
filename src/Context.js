@@ -10,12 +10,25 @@ function ContextProvider({children}) {
     useEffect(() => {
         fetch(url)
             .then(res => res.json())
-            .then(data => setAllPhotos(data))
+            .then(data => setAllPhotos(() => {
+                let modifiedData = []
+                for (let d of data) {
+                    let local = localStorage.getItem(`${d.id}-liked`)
+                    let modifiedLocal = JSON.parse(local)
+                    modifiedLocal && modifiedLocal.id === d.id ?
+                    modifiedData.push(modifiedLocal) :
+                    modifiedData.push(d)
+                }
+                return modifiedData
+            }))
     }, [])
     
     function toggleFavorite(id) {
         const updatedArr = allPhotos.map(photo => {
             if(photo.id === id) {
+                photo.isFavorite === false ?
+                localStorage.setItem(`${photo.id}-liked`, JSON.stringify({...photo, isFavorite: !photo.isFavorite})) :
+                localStorage.removeItem(`${photo.id}-liked`)
                 return {...photo, isFavorite: !photo.isFavorite}
             }
             return photo
